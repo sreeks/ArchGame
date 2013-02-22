@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xadlcore_3_0:xADL xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:hints_3_0="http://www.archstudio.org/xadl3/schemas/hints-3.0.xsd"
+    xmlns:structure_3_0="http://www.archstudio.org/xadl3/schemas/structure-3.0.xsd"
+    xmlns:xadlcore_3_0="http://www.archstudio.org/xadl3/schemas/xadlcore-3.0.xsd">
+  <structure_3_0:structure structure_3_0:id="structureffa80003-c821c986-94828acc-2f360009"
+      structure_3_0:name="Client">
+    <structure_3_0:component structure_3_0:id="componentffa80003-c8228f94-6b6bbdf6-2f36000a"
+        structure_3_0:name="Graphics Library">
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8272467-c9eb0f00-2f36000e"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6552,-10392"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:-6612,-10392,132,88"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:197,203,245"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:component>
+    <structure_3_0:component structure_3_0:id="componentffa80003-c828093b-4fb6ae9b-2f36000f"
+        structure_3_0:name="Lander Model">
+      <structure_3_0:interface structure_3_0:direction="out" structure_3_0:id="interfaceffa80003-c83bb090-01210914-2f360012"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6840,-10520"
+              hints_3_0:name="location"/>
+          <hints_3_0:hint hints_3_0:hint="java.lang.Boolean:false" hints_3_0:name="tagged"/>
+          <hints_3_0:hint hints_3_0:hint="java.lang.Integer:0" hints_3_0:name="angle"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="in" structure_3_0:id="interfaceffa80003-c840d575-09b3c1a0-2f36001f"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6840,-10600"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:-6894,-10600,108,80"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:197,203,245"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:component>
+    <structure_3_0:component structure_3_0:id="componentffa80003-c82dbd2c-e893eb67-2f360010"
+        structure_3_0:name="MotherShip Model">
+      <structure_3_0:interface structure_3_0:direction="out" structure_3_0:id="interfaceffa80003-c83bc407-3baf6dab-2f360013"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6696,-10520"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="in" structure_3_0:id="interfaceffa80003-c840e6fb-9e774afc-2f360020"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6696,-10600"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:-6750,-10600,108,80"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:197,203,245"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:component>
+    <structure_3_0:component structure_3_0:id="componentffa80003-c82f84ec-f6f6ce64-2f360011"
+        structure_3_0:name="Lunar Base Model">
+      <structure_3_0:interface structure_3_0:direction="out" structure_3_0:id="interfaceffa80003-c83bd7c8-c4b8fa7c-2f360014"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6552,-10520"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="in" structure_3_0:id="interfaceffa80003-c840f7bb-f43b4229-2f360021"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6552,-10600"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:-6606,-10600,108,80"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:197,203,245"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:component>
+    <structure_3_0:component structure_3_0:id="componentffea1940-cd82f6f8-45a7602c-65780022"
+        structure_3_0:name="HeartBeat Generator">
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffea1940-cd8349d6-c32b88a5-65780023"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6408,-10600"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffea1940-cd87b2b3-b65c4538-65780024"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6408,-10520"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:-6468,-10600,120,80"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:197,203,245"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:component>
+    <structure_3_0:connector structure_3_0:id="connectorffa80003-c82675bb-598522f3-2f36000b"
+        structure_3_0:name="C2 Connector">
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c826fae9-9e4cd3dd-2f36000d"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6552,-10422"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="in" structure_3_0:id="interfaceffa80003-c83e0aad-5ff7837d-2f360015"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6552,-10458"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="in" structure_3_0:id="interfaceffa80003-c83e110c-19aa0bfc-2f360016"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6696,-10458"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="in" structure_3_0:id="interfaceffa80003-c83e16cb-6752cd81-2f360017"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6840,-10458"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c881f35d-4a90cc60-2f3600a8"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6408,-10458"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:-6912,-10458,720,36"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:245,234,191"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:connector>
+    <structure_3_0:connector structure_3_0:id="connectorffa80003-c83ff2a5-c38203ea-2f36001b"
+        structure_3_0:name="C2 Connector">
+      <structure_3_0:interface structure_3_0:direction="out" structure_3_0:id="interfaceffa80003-c8406317-388d5abd-2f36001c"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6840,-10662"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="out" structure_3_0:id="interfaceffa80003-c8409274-1c7cd4d4-2f36001d"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6696,-10662"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="out" structure_3_0:id="interfaceffa80003-c840bbec-b1de2ec7-2f36001e"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6552,-10662"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c84997a7-401a2aca-2f360025"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6552,-10698"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8820c98-d264d59e-2f3600a9"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6408,-10662"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:-6912,-10698,720,36"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:245,234,191"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:connector>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c826ea9c-8198966a-2f36000c"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c8272467-c9eb0f00-2f36000e</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c826fae9-9e4cd3dd-2f36000d</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6552,-10397"
+            hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6552,-10417"
+            hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c83e94fc-2d3062b8-2f360018"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c83e0aad-5ff7837d-2f360015</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c83bd7c8-c4b8fa7c-2f360014</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6552,-10463"
+            hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6552,-10515"
+            hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c83eb92c-5c4e054b-2f360019"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c83e110c-19aa0bfc-2f360016</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c83bc407-3baf6dab-2f360013</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6696,-10463"
+            hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6696,-10515"
+            hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c83edbc5-3cb952f5-2f36001a"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c83e16cb-6752cd81-2f360017</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c83bb090-01210914-2f360012</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6840,-10463"
+            hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6840,-10515"
+            hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c841b5fb-311a4d15-2f360022"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c840d575-09b3c1a0-2f36001f</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c8406317-388d5abd-2f36001c</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6840,-10605"
+            hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6840,-10657"
+            hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c8455841-4cf60913-2f360023"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c840e6fb-9e774afc-2f360020</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c8409274-1c7cd4d4-2f36001d</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6696,-10605"
+            hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6696,-10657"
+            hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c845aeaa-11165722-2f360024"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c840f7bb-f43b4229-2f360021</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c840bbec-b1de2ec7-2f36001e</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6552,-10605"
+            hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6552,-10657"
+            hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffea1940-cd887c23-279de582-65780025"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c881f35d-4a90cc60-2f3600a8</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffea1940-cd87b2b3-b65c4538-65780024</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6408,-10463"
+            hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6408,-10515"
+            hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffea1940-cd8893a5-ee55f1c8-65780026"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffea1940-cd8349d6-c32b88a5-65780023</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c8820c98-d264d59e-2f3600a9</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6408,-10605"
+            hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:-6408,-10657"
+            hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+  </structure_3_0:structure>
+  <structure_3_0:structure structure_3_0:id="structureffa80003-c84a2de0-1bbc75ab-2f36007a"
+      structure_3_0:name="BigPicture">
+    <structure_3_0:component structure_3_0:id="componentffa80003-c85404fa-a3c66b97-2f360098"
+        structure_3_0:name="Lander">
+      <structure_3_0:interface structure_3_0:direction="inout">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:336,224"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:subStructure>
+        <structure_3_0:innerStructureLink>structureffa80003-c821c986-94828acc-2f360009</structure_3_0:innerStructureLink>
+        <structure_3_0:interfaceMapping structure_3_0:id="ffa80003-c87ac866-62ad6d0f-2f36009e"
+            structure_3_0:name="[New Interface] to null">
+          <structure_3_0:outerInterfaceLink>//@xADL/@topLevelElement.1/@component.0/@interface.0</structure_3_0:outerInterfaceLink>
+          <structure_3_0:innerInterfaceLink>interfaceffa80003-c84997a7-401a2aca-2f360025</structure_3_0:innerInterfaceLink>
+        </structure_3_0:interfaceMapping>
+      </structure_3_0:subStructure>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:108,224,444,304"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:197,203,245"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:component>
+    <structure_3_0:component structure_3_0:id="componentffa80003-c8542633-a6f9b41b-2f360099"
+        structure_3_0:name="Lunar Base">
+      <structure_3_0:interface structure_3_0:direction="inout">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:840,224"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:subStructure>
+        <structure_3_0:innerStructureLink>structureffa80003-c821c986-94828acc-2f360009</structure_3_0:innerStructureLink>
+        <structure_3_0:interfaceMapping structure_3_0:id="ffa80003-c87a85c7-73091871-2f36009d"
+            structure_3_0:name="[New Interface] to null">
+          <structure_3_0:outerInterfaceLink>//@xADL/@topLevelElement.1/@component.1/@interface.0</structure_3_0:outerInterfaceLink>
+          <structure_3_0:innerInterfaceLink>interfaceffa80003-c84997a7-401a2aca-2f360025</structure_3_0:innerInterfaceLink>
+        </structure_3_0:interfaceMapping>
+      </structure_3_0:subStructure>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:588,224,468,304"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:197,203,245"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:component>
+    <structure_3_0:component structure_3_0:id="componentffa80003-c8548559-f745a0c1-2f36009a"
+        structure_3_0:name="Mother Ship">
+      <structure_3_0:interface structure_3_0:direction="inout">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:1368,224"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:subStructure>
+        <structure_3_0:innerStructureLink>structureffa80003-c821c986-94828acc-2f360009</structure_3_0:innerStructureLink>
+        <structure_3_0:interfaceMapping structure_3_0:id="ffa80003-c87e5d0c-e25dc889-2f36009f"
+            structure_3_0:name="[New Interface] to null">
+          <structure_3_0:outerInterfaceLink>//@xADL/@topLevelElement.1/@component.2/@interface.0</structure_3_0:outerInterfaceLink>
+          <structure_3_0:innerInterfaceLink>interfaceffa80003-c84997a7-401a2aca-2f360025</structure_3_0:innerInterfaceLink>
+        </structure_3_0:interfaceMapping>
+      </structure_3_0:subStructure>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:1104,224,552,304"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:197,203,245"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:component>
+    <structure_3_0:component structure_3_0:id="componentffa80003-c8895591-1ddc04fa-2f3600ab"
+        structure_3_0:name="Game Server">
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c88bebd5-50c42ea0-2f3600ad"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:840,12" hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:subStructure>
+        <structure_3_0:innerStructureLink>structureffa80003-c88e7427-ad495fad-2f3600ae</structure_3_0:innerStructureLink>
+        <structure_3_0:interfaceMapping structure_3_0:id="ffea1940-cd6022c1-41fed161-6578001c"
+            structure_3_0:name="[New Interface] to [New Interface]">
+          <structure_3_0:outerInterfaceLink>interfaceffa80003-c88bebd5-50c42ea0-2f3600ad</structure_3_0:outerInterfaceLink>
+          <structure_3_0:innerInterfaceLink>interfaceffa80003-c88f8b6e-15f11b91-2f3600b1</structure_3_0:innerInterfaceLink>
+        </structure_3_0:interfaceMapping>
+      </structure_3_0:subStructure>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:171,-636,1293,648"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:197,203,245"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:component>
+    <structure_3_0:component structure_3_0:id="componentffea1940-cd60574e-ea68ae99-6578001d"
+        structure_3_0:name="Event Synchronizer">
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffea1940-cd60d5e8-7498c8b8-6578001e"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:840,32" hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffea1940-cd6128c2-e6de7308-65780020"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:840,112"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:780,32,120,80"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:197,203,245"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:component>
+    <structure_3_0:connector structure_3_0:id="connectorffa80003-c87e72c6-96c1176e-2f3600a0"
+        structure_3_0:name="Network Connector">
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c87f898e-a5dedd5b-2f3600a1"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:720,186"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c87f9c42-b5538e38-2f3600a2"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:840,186"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c87fa7ae-6751d3a1-2f3600a3"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:960,186"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c88173f5-8f7e7c22-2f3600a7"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:840,150"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:720,150,240,36"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:245,234,191"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:connector>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c87fc316-e12edc6d-2f3600a4"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>//@xADL/@topLevelElement.1/@component.0/@interface.0</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c87f898e-a5dedd5b-2f3600a1</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:341,223" hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:715,186" hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c87feb4d-0fb67462-2f3600a5"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>//@xADL/@topLevelElement.1/@component.1/@interface.0</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c87f9c42-b5538e38-2f3600a2</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:840,219" hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:840,191" hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c8802a68-060f2eba-2f3600a6"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>//@xADL/@topLevelElement.1/@component.2/@interface.0</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c87fa7ae-6751d3a1-2f3600a3</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:1363,224" hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:965,186" hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffea1940-cd60fd55-9e9e84ef-6578001f"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffea1940-cd60d5e8-7498c8b8-6578001e</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c88bebd5-50c42ea0-2f3600ad</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:840,27" hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:840,17" hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffea1940-cd61ccad-229602b9-65780021"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c88173f5-8f7e7c22-2f3600a7</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffea1940-cd6128c2-e6de7308-65780020</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:840,145" hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:840,117" hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+  </structure_3_0:structure>
+  <structure_3_0:structure structure_3_0:id="structureffa80003-c88e7427-ad495fad-2f3600ae"
+      structure_3_0:name="Server">
+    <structure_3_0:component structure_3_0:id="componentffa80003-c890f402-c5ba5723-2f3600b3"
+        structure_3_0:name="Clock">
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8911dce-e35e4556-2f3600b4"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:192,-56"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:120,-136,132,80"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:197,203,245"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:component>
+    <structure_3_0:component structure_3_0:id="componentffa80003-c891bfe0-87a1f99d-2f3600b7"
+        structure_3_0:name="Lander Model">
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8922ade-eb230196-2f3600b8"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:336,-56"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:276,-136,132,80"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:197,203,245"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:component>
+    <structure_3_0:component structure_3_0:id="componentffa80003-c894462d-11c8cb08-2f3600bb"
+        structure_3_0:name="Lunar Base Model">
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8949709-d3775817-2f3600bc"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:504,-56"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:444,-136,120,80"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:197,203,245"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:component>
+    <structure_3_0:component structure_3_0:id="componentffa80003-c8a02dd8-aa75fe7b-2f3600bf"
+        structure_3_0:name="Mother Ship Model">
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8a24637-d4df0d9a-2f3600c0"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:672,-56"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:612,-136,120,80"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:197,203,245"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:component>
+    <structure_3_0:component structure_3_0:id="componentffa80003-c8a9719b-5c67a45f-2f3600c3"
+        structure_3_0:name="Position Logic">
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8aaa88a-eca2af7b-2f3600c5"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:192,56" hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8ae3290-961c4440-2f3600ce"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:192,136"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:132,56,132,80"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:197,203,245"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:component>
+    <structure_3_0:component structure_3_0:id="componentffa80003-c8ab312a-4e9dc376-2f3600c7"
+        structure_3_0:name="Game Physics">
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8ab6baa-474b43f5-2f3600c9"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:360,55" hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8b7453d-1158eb60-2f3600d0"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:360,137"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:294,55,132,82"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:197,203,245"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:component>
+    <structure_3_0:component structure_3_0:id="componentffa80003-c8b7aa54-8daba5ec-2f3600d2"
+        structure_3_0:name="Status Logic">
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8b819ed-28236eff-2f3600d3"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:528,272"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8b82396-15a7e122-2f3600d4"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:528,352"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:468,272,120,80"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:197,203,245"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:component>
+    <structure_3_0:connector structure_3_0:id="connectorffa80003-c88ebb78-e5f43d15-2f3600af"
+        structure_3_0:name="C2 Connector">
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c88f8848-b61ad181-2f3600b0"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:528,384"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c88f8b6e-15f11b91-2f3600b1"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:432,426"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8b9b22c-884e74a5-2f3600da"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:624,384"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:120,384,624,42"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:245,234,191"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:connector>
+    <structure_3_0:connector structure_3_0:id="connectorffa80003-c8903f7e-81885783-2f3600b2"
+        structure_3_0:name="C2 Connector">
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8916b56-76bfce9a-2f3600b5"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:192,-18"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8924679-0551c986-2f3600b9"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:336,-18"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c894e195-f21b0da6-2f3600bd"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:504,-18"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8a26281-a12fe5f5-2f3600c1"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:672,-18"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8aa8f04-f27ed540-2f3600c4"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:192,18" hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8ab41e1-5bbf8f3d-2f3600c8"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:360,18" hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8bf7171-f3b0a93e-2f3600dd"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:624,18" hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:120,-18,624,36"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:245,234,191"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:connector>
+    <structure_3_0:connector structure_3_0:id="connectorffa80003-c8ad48a1-1fcf7e1e-2f3600cb"
+        structure_3_0:name="C2 Connector">
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8adc9c1-ef5a3eca-2f3600cc"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:192,174"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8addd6a-9cc7eab5-2f3600cd"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:360,174"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8b8d9d3-f78e7ee7-2f3600d7"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:528,210"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffa80003-c8b95301-96e5434c-2f3600d9"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:624,210"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:interface structure_3_0:direction="inout" structure_3_0:id="interfaceffea1940-cc92df2d-a8b776da-6578000f"
+          structure_3_0:name="[New Interface]">
+        <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+          <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:624,174"
+              hints_3_0:name="location"/>
+        </structure_3_0:ext>
+      </structure_3_0:interface>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Rectangle:120,174,552,36"
+            hints_3_0:name="bounds"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.RGB:245,234,191"
+            hints_3_0:name="assembly-background/color"/>
+      </structure_3_0:ext>
+    </structure_3_0:connector>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c891911f-b36ae765-2f3600b6"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c8916b56-76bfce9a-2f3600b5</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c8911dce-e35e4556-2f3600b4</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:192,-23" hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:192,-51" hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c8925ebe-2ad891f2-2f3600ba"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c8924679-0551c986-2f3600b9</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c8922ade-eb230196-2f3600b8</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:336,-23" hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:336,-51" hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c8965373-92aec373-2f3600be"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c894e195-f21b0da6-2f3600bd</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c8949709-d3775817-2f3600bc</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:504,-23" hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:504,-51" hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c8a4cd6d-5fac3b30-2f3600c2"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c8a26281-a12fe5f5-2f3600c1</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c8a24637-d4df0d9a-2f3600c0</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:672,-23" hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:672,-51" hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c8aac9e3-c89935ff-2f3600c6"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c8aaa88a-eca2af7b-2f3600c5</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c8aa8f04-f27ed540-2f3600c4</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:192,51" hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:192,23" hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c8ab85ac-462f2e1d-2f3600ca"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c8ab6baa-474b43f5-2f3600c9</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c8ab41e1-5bbf8f3d-2f3600c8</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:360,50" hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:360,23" hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c8ae65a2-75b6c7d5-2f3600cf"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c8adc9c1-ef5a3eca-2f3600cc</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c8ae3290-961c4440-2f3600ce</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:192,169" hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:192,141" hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c8b76a3d-ee21f3c7-2f3600d1"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c8addd6a-9cc7eab5-2f3600cd</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c8b7453d-1158eb60-2f3600d0</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:360,169" hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:360,142" hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c8b87cf4-347e6155-2f3600d5"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c88f8848-b61ad181-2f3600b0</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c8b82396-15a7e122-2f3600d4</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:528,379" hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:528,357" hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c8b908f3-3a96049a-2f3600d8"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c8b819ed-28236eff-2f3600d3</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c8b8d9d3-f78e7ee7-2f3600d7</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:528,267" hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:528,215" hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffa80003-c8b9d756-12f33e03-2f3600db"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffa80003-c8b9b22c-884e74a5-2f3600da</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c8b95301-96e5434c-2f3600d9</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:624,379" hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:624,215" hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+    <structure_3_0:link structure_3_0:id="linkffea1940-cc932817-99754fa4-65780010"
+        structure_3_0:name="[New Link]">
+      <structure_3_0:point1>interfaceffea1940-cc92df2d-a8b776da-6578000f</structure_3_0:point1>
+      <structure_3_0:point2>interfaceffa80003-c8bf7171-f3b0a93e-2f3600dd</structure_3_0:point2>
+      <structure_3_0:ext xsi:type="hints_3_0:HintsExtension">
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:624,169" hints_3_0:name="endpoint1"/>
+        <hints_3_0:hint hints_3_0:hint="org.eclipse.swt.graphics.Point:624,23" hints_3_0:name="endpoint2"/>
+        <hints_3_0:hint hints_3_0:hint="List{}:" hints_3_0:name="midpoints"/>
+      </structure_3_0:ext>
+    </structure_3_0:link>
+  </structure_3_0:structure>
+</xadlcore_3_0:xADL>

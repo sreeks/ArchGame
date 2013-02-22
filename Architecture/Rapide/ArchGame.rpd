@@ -1,0 +1,87 @@
+type Request is string;
+type Client is string;
+
+type GameServer is interface 
+action in ProcessRequest(); 
+	   out GenerateResult(); 
+behavior 
+begin 
+	ProcessRequest => GenerateResult();; 
+end GameServer;
+
+type EventSynchronizer is interface 
+action in ProcessRequestWithHeartbeat(), RequestExecuted(), Register(), DeRegister(); 
+	   out ForwardRequest(), Notify(); 
+behavior
+	UnprocessedRequests: var Request[];
+	action AddToUnprocessedRequests();
+	action RemoveRequestFromUnprocessed();
+	action AddToClientList();
+	action RemoveFromClientList();
+	action ClockTick();
+	action PauseClients(); 
+begin 
+	(ProcessRequestWithHeartbeat) => \
+	if($UnprocessedRequests.length > 0 ) then \
+		PauseClients(), AddToUnprocessedRequests(), ForwardRequest(); \
+	else \
+		AddToUnprocessedRequests(), ForwardRequest(); \
+	end if;;
+	RequestExecuted => RemoveRequestFromUnprocessed(), Notify();
+	Register => AddToClientList();
+	DeRegister => RemoveFromClientList();
+	(?C in Client) ClockTick() => \
+	if(NotHeardHeartBeat(?C)) then \
+		PauseClients();
+	end if;;
+end EventSynchronizer;
+
+type HeartBeatGenerator is interface 
+action in GraphicsEventGenerated(); 
+	   out DispatchRequestWithHeartBeat(); 
+behavior
+	action ClockTick();
+	action AddToRequest();
+	action ConvertRequestToRequestWithHeartbeat(); 
+begin
+	GraphicsEventGenerated => AddToRequest();
+	ClockTick => ConvertRequestToRequestWithHeartbeat(), DispatchRequestWithHeartBeat() 
+end HeartBeatGenerator;
+
+type GraphicsLibrary is interface 
+action out GraphicsEventGenerated(); 
+end GraphicsLibrary ;
+
+type GameClient is interface 
+action out DispatchRequestWithHeartBeat(), Register(), DeRegister();
+	   in Notify(); 
+end GameClient ;
+
+architecture GameClientArch() for GameClient is 
+	GL : GraphicsLibrary; 
+	HBG : HeartBeatGenerator; 
+connect 
+	GL.GraphicsEventGenerated => HBG.GraphicsEventGenerated
+	HBG.DispatchRequestWithHeartBeat => DispatchRequestWithHeartBeat;
+end GameClientArch;
+
+architecture BigPicture() is
+	Lander, MotherShip, LunarBase : GameClient;
+	EventSync: EventSychronizer;
+	Server: GameServer;
+connect
+	Lander.DispatchRequestWithHeartBeat => EventSync.ProcessRequestWithHeartbeat();
+	MotherShip.DispatchRequestWithHeartBeat => EventSync.ProcessRequestWithHeartbeat();
+	LunarBase.DispatchRequestWithHeartBeat => EventSync.ProcessRequestWithHeartbeat();
+	Lander.Register => EventSync.Register();
+	MotherShip.Register => EventSync.Register();
+	LunarBase.Register => EventSync.Register();
+	Lander.DeRegister => EventSync.DeRegister();
+	MotherShip.DeRegister => EventSync.DeRegister();
+	LunarBase.DeRegister => EventSync.DeRegister();
+	EventSync.ForwardRequest => Server.ProcessRequest();
+	Server.GenerateResult => EventSync.RequestExecuted();
+	EventSync.Notify => Lander.Notify();
+	EventSync.Notify => MotherShip.Notify();
+	EventSync.Notify => LunarBase.Notify();
+end BigPicture;
