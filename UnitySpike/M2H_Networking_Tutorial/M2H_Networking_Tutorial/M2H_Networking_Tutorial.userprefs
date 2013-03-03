@@ -1,0 +1,22 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Tutorial 3\Tutorial_3_Playerscript.js">
+    <Files>
+      <File FileName="Assets\Tutorial 2\Tutorial_2B_Spawnscript.js" Line="15" Column="2" />
+      <File FileName="Assets\Tutorial 2\Tutorial_2B_Playerscript.js" Line="1" Column="1" />
+      <File FileName="Assets\Tutorial 2\Tutorial_2A1.js" Line="1" Column="1" />
+      <File FileName="Assets\Tutorial 2\Tutorial_2A2.js" Line="1" Column="1" />
+      <File FileName="Assets\Tutorial 2\Tutorial_2A3.js" Line="1" Column="1" />
+      <File FileName="Assets\Tutorial 3\Tutorial_3_Playerscript.js" Line="109" Column="2" />
+      <File FileName="Assets\Tutorial 3\Tutorial_3_Spawnscript.js" Line="68" Column="2" />
+      <File FileName="Assets\Tutorial 1\Connect.js" Line="1" Column="1" />
+      <File FileName="Assets\Example4\GameAssets\Scripts\PlayerScript.js" Line="142" Column="2" />
+      <File FileName="Assets\Example4\GameAssets\Scripts\GameSetup.js" Line="56" Column="2" />
+      <File FileName="Assets\Example4\GameAssets\Scripts\gameGUI.js" Line="45" Column="6" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
