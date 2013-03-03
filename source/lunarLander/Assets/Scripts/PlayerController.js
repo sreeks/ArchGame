@@ -78,6 +78,12 @@ function OnCollisionEnter(hitInfo : Collision) //uho, the ship hit something!
 		landingPad = hitInfo.gameObject.GetComponent("LandingPad");
 		landingPad.Activate();		
 	}
+	else if(hitInfo.gameObject.tag == "Mothership")
+	{
+		var mothership : Mothership; //the script on the mothership
+		mothership = hitInfo.gameObject.GetComponent("Mothership");
+		mothership.Activate();		
+	}
 }
 
 function Explode() //Drop in a random explosion effect, and destroy ship
