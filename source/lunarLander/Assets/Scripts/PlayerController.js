@@ -184,6 +184,7 @@ function OnCollisionEnter(hitInfo : Collision) //uho, the ship hit something!
 {
 	if(hitInfo.relativeVelocity.magnitude >= 2) //if we hit it too hard, explode!
 	{
+		networkView.RPC("Explode", RPCMode.All);
 		Explode();
 	}
 	else if(hitInfo.gameObject.tag == "LandingPad")
@@ -200,6 +201,7 @@ function OnCollisionEnter(hitInfo : Collision) //uho, the ship hit something!
 	}
 }
 
+@RPC
 function Explode() //Drop in a random explosion effect, and destroy ship
 {	
 	var randomNumber : int = Random.Range(0,shipExplosions.length);
