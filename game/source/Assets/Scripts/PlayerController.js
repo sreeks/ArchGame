@@ -16,6 +16,7 @@ function Update ()
 {
 	if(Input.GetAxis("Horizontal") > 0) //checking for right arrow key
 	{
+		var temp = Input.GetAxis("Horizontal");
 		rightThruster.emit = false;
 		leftThruster.emit = true;
 		rigidbody.AddForce(100,0,0);

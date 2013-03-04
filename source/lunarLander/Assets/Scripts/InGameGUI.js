@@ -43,50 +43,52 @@ function OnGUI()
 {
 	GUI.skin = myGUISkin;
 
-	if(guiMode == "PauseMenu")
-	{
-		if(GUI.Button(Rect(Screen.width/2-(btnWidth/2),Screen.height/2-20,btnWidth,30), "resume game"))
+	if (Network.peerType == NetworkPeerType.Client){
+		if(guiMode == "PauseMenu")
 		{
-			Time.timeScale = 1;
-			gameActive = true;
-			guiMode = "InGame";
-			print("resuming game");
+			if(GUI.Button(Rect(Screen.width/2-(btnWidth/2),Screen.height/2-20,btnWidth,30), "resume game"))
+			{
+				Time.timeScale = 1;
+				gameActive = true;
+				guiMode = "InGame";
+				print("resuming game");
+			}
+			if(GUI.Button(Rect(Screen.width/2-(btnWidth/2),Screen.height/2+20,btnWidth,30), "quit to main menu"))
+			{
+				Time.timeScale = 1;
+				Application.LoadLevel(0);
+				print("quiting to main menu");
+			}
 		}
-		if(GUI.Button(Rect(Screen.width/2-(btnWidth/2),Screen.height/2+20,btnWidth,30), "quit to main menu"))
+		if(guiMode == "Win")
 		{
-			Time.timeScale = 1;
-			Application.LoadLevel(0);
-			print("quiting to main menu");
+			if(GUI.Button(Rect(Screen.width/2-(btnWidth/2),Screen.height/2-20,btnWidth,30), "next level!"))
+			{
+				Time.timeScale = 1;
+				Application.LoadLevel(Application.loadedLevel+1);
+				print("on to the next level!");
+			}
+			if(GUI.Button(Rect(Screen.width/2-(btnWidth/2),Screen.height/2+20,btnWidth,30), "quit to main menu"))
+			{
+				Time.timeScale = 1;
+				Application.LoadLevel(0);
+				print("quiting to main menu");
+			}
 		}
-	}
-	if(guiMode == "Win")
-	{
-		if(GUI.Button(Rect(Screen.width/2-(btnWidth/2),Screen.height/2-20,btnWidth,30), "next level!"))
+		if(guiMode == "Lose")
 		{
-			Time.timeScale = 1;
-			Application.LoadLevel(Application.loadedLevel+1);
-			print("on to the next level!");
-		}
-		if(GUI.Button(Rect(Screen.width/2-(btnWidth/2),Screen.height/2+20,btnWidth,30), "quit to main menu"))
-		{
-			Time.timeScale = 1;
-			Application.LoadLevel(0);
-			print("quiting to main menu");
-		}
-	}
-	if(guiMode == "Lose")
-	{
-		if(GUI.Button(Rect(Screen.width/2-(btnWidth/2),Screen.height/2-20,btnWidth,30), "retry level"))
-		{
-			Time.timeScale = 1;
-			Application.LoadLevel(Application.loadedLevel);
-			print("Retrying level...");
-		}
-		if(GUI.Button(Rect(Screen.width/2-(btnWidth/2),Screen.height/2+20,btnWidth,30), "quit to main menu"))
-		{
-			Time.timeScale = 1;
-			Application.LoadLevel(0);
-			print("quiting to main menu");
+			if(GUI.Button(Rect(Screen.width/2-(btnWidth/2),Screen.height/2-20,btnWidth,30), "retry level"))
+			{
+				Time.timeScale = 1;
+				Application.LoadLevel(Application.loadedLevel);
+				print("Retrying level...");
+			}
+			if(GUI.Button(Rect(Screen.width/2-(btnWidth/2),Screen.height/2+20,btnWidth,30), "quit to main menu"))
+			{
+				Time.timeScale = 1;
+				Application.LoadLevel(0);
+				print("quiting to main menu");
+			}
 		}
 	}
 }
