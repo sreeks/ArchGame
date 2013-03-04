@@ -1,0 +1,12 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\MyData\Projects\ArchGame\source\lunarLander\Assets\Scripts\PlayerController.js" line="153" />
+      <Breakpoint file="C:\MyData\Projects\ArchGame\source\lunarLander\Assets\Scripts\PlayerController.js" line="166" />
+      <Breakpoint file="C:\MyData\Projects\ArchGame\source\lunarLander\Assets\Scripts\PlayerController.js" line="149" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
