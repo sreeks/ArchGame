@@ -9,9 +9,8 @@ public class DetonatorSound : DetonatorComponent {
 	public AudioClip[] farSounds;
 	
 	public float distanceThreshold = 50f; //threshold in m between playing nearSound and farSound
-	public float minVolume = .4f;
-	public float maxVolume = 1f;
-	public float rolloffFactor = 0.5f;
+	public float minDistance = 1.0f;
+	public float maxDistance = 100.0f;
 	
 	private AudioSource _soundComponent;
 	private bool _delayedExplosionStarted = false;
@@ -47,9 +46,9 @@ public class DetonatorSound : DetonatorComponent {
 		}		
 		if (_explodeDelay <= 0) 
 		{
-	//		_soundComponent.minVolume = minVolume;
-	//		_soundComponent.maxVolume = maxVolume;
-	//		_soundComponent.rolloffFactor = rolloffFactor;
+			_soundComponent.minDistance = minDistance;
+			_soundComponent.maxDistance = maxDistance;
+			_soundComponent.rolloffMode = AudioRolloffMode.Logarithmic;
 			
 			if (Vector3.Distance(Camera.main.transform.position, this.transform.position) < distanceThreshold)
 			{

@@ -44,6 +44,38 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Character Controller Scripts\AccelerationCharacterController.cs" />
+     <Compile Include="Assets\Character Controller Scripts\AimLookCharacterController.cs" />
+     <Compile Include="Assets\Character Controller Scripts\CharacterMotor.cs" />
+     <Compile Include="Assets\Character Controller Scripts\FPSCharacterController.cs" />
+     <Compile Include="Assets\Character Controller Scripts\Follower.cs" />
+     <Compile Include="Assets\Character Controller Scripts\JumpAndIdle.cs" />
+     <Compile Include="Assets\Character Controller Scripts\MouseLookCharacterController.cs" />
+     <Compile Include="Assets\Character Controller Scripts\NormalCharacterMotor.cs" />
+     <Compile Include="Assets\Character Controller Scripts\PhysicsCharacterMotor.cs" />
+     <Compile Include="Assets\Character Controller Scripts\PlatformCharacterController.cs" />
+     <Compile Include="Assets\Character Controller Scripts\WanderingAICharacterController.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\AnimationDebugOutput.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\CharacterShadow.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\CharacterShadowHelper.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\DeathManager.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\DetachChildrenAndDestroy.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\ExecutionOrderController.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\FollowTransform.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\HealthController.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\MenuController.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\Orb\Frenzy.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\Orb\OrbController.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\Player\ArmIK.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\Player\GunAimer.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\Player\HeadLookController.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\Player\ImpactController.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\Player\RagdollInstantiator.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\Player\SoundEffectController.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\Player\SpeechController.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\Player\WeaponStateController.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\ProgressBar.cs" />
+     <Compile Include="Assets\Demo Scene Scripts\ShooterGameCamera.cs" />
      <Compile Include="Assets\Detonator\System\Detonator.cs" />
      <Compile Include="Assets\Detonator\System\DetonatorBurstEmitter.cs" />
      <Compile Include="Assets\Detonator\System\DetonatorCloudRing.cs" />
@@ -57,6 +89,23 @@
      <Compile Include="Assets\Detonator\System\DetonatorSound.cs" />
      <Compile Include="Assets\Detonator\System\DetonatorSparks.cs" />
      <Compile Include="Assets\Detonator\System\DetonatorSpray.cs" />
+     <Compile Include="Assets\Frameworks\Locomotion System\AlignmentTracker.cs" />
+     <Compile Include="Assets\Frameworks\Locomotion System\GhostOriginal.cs" />
+     <Compile Include="Assets\Frameworks\Locomotion System\IK1JointAnalytic.cs" />
+     <Compile Include="Assets\Frameworks\Locomotion System\IKSimple.cs" />
+     <Compile Include="Assets\Frameworks\Locomotion System\IKSolver.cs" />
+     <Compile Include="Assets\Frameworks\Locomotion System\IMotionAnalyzer.cs" />
+     <Compile Include="Assets\Frameworks\Locomotion System\Interpolator.cs" />
+     <Compile Include="Assets\Frameworks\Locomotion System\LegAnimator.cs" />
+     <Compile Include="Assets\Frameworks\Locomotion System\LegController.cs" />
+     <Compile Include="Assets\Frameworks\Locomotion System\MotionAnalyzer.cs" />
+     <Compile Include="Assets\Frameworks\Locomotion System\MotionAnalyzerBackwards.cs" />
+     <Compile Include="Assets\Frameworks\Locomotion System\PolarGradientBandInterpolator.cs" />
+     <Compile Include="Assets\Frameworks\Locomotion System\TrajectoryVisualizer.cs" />
+     <Compile Include="Assets\Frameworks\Locomotion System\Util.cs" />
+     <Compile Include="Assets\Shaders\BumpLightMap.cs" />
+     <None Include="Assets\Shaders\ProgressBar.shader" />
+     <None Include="Assets\Shaders\FadedAddSmooth.shader" />
      <None Include="Assets\Detonator\Resources\Detonator\Textures\HeatDistort.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -45,8 +45,8 @@ using System.Collections;
 */
 public abstract class DetonatorComponent : MonoBehaviour
 {
-	public bool on = true;
-	public bool detonatorControlled = true;
+	public  bool on = true;
+	public  bool detonatorControlled = true;
 	
 	 [HideInInspector] 
 	public  float startSize = 1f;
@@ -58,7 +58,7 @@ public abstract class DetonatorComponent : MonoBehaviour
 	[HideInInspector]  
 	public  float startDuration = 2f;
 	public  float duration = 2f;
-		
+	
 	[HideInInspector]
 	public  float timeScale = 1f;
 	
@@ -74,14 +74,8 @@ public abstract class DetonatorComponent : MonoBehaviour
 	public  Vector3 startLocalPosition = Vector3.zero;
 	public  Vector3 localPosition = Vector3.zero;
 	
-	[HideInInspector]
-	public  Vector3 startForce = Vector3.zero;
 	public  Vector3 force = Vector3.zero;
-	
-	[HideInInspector]
-	public  Vector3 startVelocity = Vector3.zero;
-	public  Vector3 velocity = Vector3.zero;
-	
+
     public abstract void Explode();
 	
 	//The main Detonator calls this instead of using Awake() or Start() on subcomponents
@@ -99,8 +93,6 @@ public abstract class DetonatorComponent : MonoBehaviour
 	public void SetStartValues()
 	{
 		startSize = size;
-		startForce = force;
-		startVelocity = velocity;
 		startDuration = duration;
 		startDetail = detail;
 		startColor = color;
@@ -132,11 +124,8 @@ public class Detonator : MonoBehaviour {
 	public bool explodeOnStart = true;
 	public float duration = Detonator._baseDuration;
 	public float detail = 1f; 
-	public float upwardsBias = 0f;
 	
 	public float destroyTime = 7f; //sorry this is not auto calculated... yet.
-	public bool useWorldSpace = true;
-	public Vector3 direction = Vector3.zero;
 	
 	public Material fireballAMaterial;
 	public Material fireballBMaterial;
@@ -313,8 +302,6 @@ public class Detonator : MonoBehaviour {
 					component.size = component.startSize * (size / _baseSize);
 					component.timeScale = (duration / _baseDuration);
 					component.detail = component.startDetail * detail;
-					component.force = (component.startForce *  (size /_baseSize)) + (direction * (size /_baseSize));
-					component.velocity = (component.startVelocity *  (size /_baseSize)) + (direction * (size /_baseSize));
 				
 					//take the alpha of detonator color and consider it a weight - 1=use all detonator, 0=use all components
 					component.color = Color.Lerp(component.startColor, color, color.a);
@@ -338,7 +325,7 @@ public class Detonator : MonoBehaviour {
 	
 	public void Reset() 
 	{
-		size = 10f; //this is hardcoded because _baseSize up top is not really the default as much as what we match to
+		size = _baseSize;
 		color = _baseColor;
 		duration = _baseDuration;
 		FillDefaultMaterials();
@@ -425,7 +412,7 @@ public class Detonator : MonoBehaviour {
         defaultShockwaveMaterial = new Material(Shader.Find("Particles/Additive"));
 		defaultShockwaveMaterial.name = "Shockwave-Default";
         Texture2D tex = Resources.Load("Detonator/Textures/Shockwave") as Texture2D;
-		defaultShockwaveMaterial.SetColor("_TintColor", new Color(0.1f,0.1f,0.1f,1f));
+		defaultShockwaveMaterial.SetColor("_TintColor", Color.white);
 		defaultShockwaveMaterial.mainTexture = tex;
 		return defaultShockwaveMaterial;
 	}

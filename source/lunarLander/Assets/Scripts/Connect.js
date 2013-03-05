@@ -10,6 +10,7 @@
 
 var connectToIP : String = "127.0.0.1";
 var connectPort : int = 25001;
+public var playerType : String;
 
 
 //Obviously the GUI is for both client&servers (mixed!)
@@ -22,7 +23,8 @@ function OnGUI ()
 		
 		connectToIP = GUILayout.TextField(connectToIP, GUILayout.MinWidth(100));
 		connectPort = parseInt(GUILayout.TextField(connectPort.ToString()));
-		
+		playerType = GUILayout.TextField("lander", GUILayout.MinWidth(100));
+
 		GUILayout.BeginVertical();
 		if (GUILayout.Button ("Connect as client"))
 		{

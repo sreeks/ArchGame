@@ -1,6 +1,13 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench />
+﻿<Properties GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerController.js">
+    <Files>
+      <File FileName="Assets\Scripts\PlayerController.js" Line="198" Column="21" />
+      <File FileName="Assets\Demo Scene Scripts\Orb\OrbController.cs" Line="10" Column="26" />
+      <File FileName="Assets\Demo Scene Scripts\DeathManager.cs" Line="27" Column="2" />
+      <File FileName="Assets\Demo Scene Scripts\Player\WeaponStateController.cs" Line="51" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

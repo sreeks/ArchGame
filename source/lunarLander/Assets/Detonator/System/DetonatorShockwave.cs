@@ -13,6 +13,7 @@ public class DetonatorShockwave : DetonatorComponent
 	private GameObject _shockwave;
 	private DetonatorBurstEmitter _shockwaveEmitter;
 	public Material shockwaveMaterial;
+	public Vector3 velocity;
 	
 	public ParticleRenderMode renderMode;
 		
@@ -39,11 +40,9 @@ public class DetonatorShockwave : DetonatorComponent
 		_shockwave = new GameObject("Shockwave");
 		_shockwaveEmitter = (DetonatorBurstEmitter)_shockwave.AddComponent("DetonatorBurstEmitter");
 		_shockwave.transform.parent = this.transform;
-		_shockwave.transform.localRotation = Quaternion.identity;
 		_shockwave.transform.localPosition = localPosition;
 		_shockwaveEmitter.material = shockwaveMaterial;
 		_shockwaveEmitter.exponentialGrowth = false;
-		_shockwaveEmitter.useWorldSpace = MyDetonator().useWorldSpace;
     }
 	
 	public void UpdateShockwave()

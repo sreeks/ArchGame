@@ -1,3 +1,6 @@
+// Upgrade NOTE: replaced 'samplerRECT' with 'sampler2D'
+// Upgrade NOTE: replaced 'texRECTproj' with 'tex2Dproj'
+
 // Per pixel bumped refraction.
 // Uses a normal map to distort the image behind, and
 // an additional texture to tint the color.
@@ -6,48 +9,17 @@ Shader "HeatDistort" {
 Properties {
 	_BumpAmt  ("Distortion", range (0,128)) = 10
 	_MainTex ("Tint Color (RGB)", 2D) = "white" {}
-	_BumpMap ("Normalmap", 2D) = "bump" {}
+	_BumpMap ("Bumpmap (RGB)", 2D) = "bump" {}
 }
-
-CGINCLUDE
-#pragma fragmentoption ARB_precision_hint_fastest
-#pragma fragmentoption ARB_fog_exp2
-#include "UnityCG.cginc"
-
-sampler2D _GrabTexture : register(s0);
-float4 _GrabTexture_TexelSize;
-sampler2D _BumpMap : register(s1);
-sampler2D _MainTex : register(s2);
-
-struct v2f {
-	float4 vertex : POSITION;
-	float4 uvgrab : TEXCOORD0;
-	float2 uvbump : TEXCOORD1;
-	float2 uvmain : TEXCOORD2;
-};
-
-uniform float _BumpAmt;
-
-
-half4 frag( v2f i ) : COLOR
-{
-	// calculate perturbed coordinates
-	half2 bump = UnpackNormal(tex2D( _BumpMap, i.uvbump )).rg; // we could optimize this by just reading the x & y without reconstructing the Z
-	float2 offset = bump * _BumpAmt * _GrabTexture_TexelSize.xy;
-	i.uvgrab.xy = offset * i.uvgrab.z + i.uvgrab.xy;
-	
-	half4 col = tex2Dproj( _GrabTexture, i.uvgrab.xyw );
-	half4 tint = tex2D( _MainTex, i.uvmain );
-	return col * tint;
-}
-ENDCG
 
 Category {
 
 	// We must be transparent, so other objects are drawn before this one.
-	Tags { "Queue"="Transparent+100" "RenderType"="Opaque" }
-
-
+	Tags { "Queue" = "Transparent" }
+	
+	// ------------------------------------------------------------------
+	//  ARB fragment program
+	
 	SubShader {
 
 		// This pass grabs the screen behind the object into a texture.
@@ -64,33 +36,94 @@ Category {
 			Tags { "LightMode" = "Always" }
 			
 CGPROGRAM
-#pragma vertex vert
+// Upgrade NOTE: excluded shader from OpenGL ES 2.0 because it does not contain both vertex and fragment programs.
+#pragma exclude_renderers gles
 #pragma fragment frag
+#pragma fragmentoption ARB_precision_hint_fastest 
+#pragma fragmentoption ARB_fog_exp2
 
-struct appdata_t {
-	float4 vertex : POSITION;
-	float2 texcoord: TEXCOORD0;
+sampler2D _GrabTexture : register(s0);
+float4 _GrabTexture_TexelSize;
+sampler2D _BumpMap : register(s1);
+sampler2D _MainTex : register(s2);
+
+struct v2f {
+	float4 uvgrab : TEXCOORD0;
+	float2 uvbump : TEXCOORD1;
+	float2 uvmain : TEXCOORD2;
 };
 
-v2f vert (appdata_t v)
+uniform float _BumpAmt;
+
+half4 frag( v2f i ) : COLOR
 {
-	v2f o;
-	o.vertex = mul(UNITY_MATRIX_MVP, v.vertex);
-	#if UNITY_UV_STARTS_AT_TOP
-	float scale = -1.0;
-	#else
-	float scale = 1.0;
+	// calculate perturbed coordinates
+	half2 bump = tex2D( _BumpMap, i.uvbump ).rg * 2 - 1;
+	float2 offset = bump * _BumpAmt;
+	#ifdef SHADER_API_D3D9
+	offset *= _GrabTexture_TexelSize.xy;
 	#endif
-	o.uvgrab.xy = (float2(o.vertex.x, o.vertex.y*scale) + o.vertex.w) * 0.5;
-	o.uvgrab.zw = o.vertex.zw;
-	o.uvbump = MultiplyUV( UNITY_MATRIX_TEXTURE1, v.texcoord );
-	o.uvmain = MultiplyUV( UNITY_MATRIX_TEXTURE2, v.texcoord );
-	return o;
+	
+	i.uvgrab.xy = offset * i.uvgrab.z + i.uvgrab.xy;
+	
+	half4 col = tex2Dproj( _GrabTexture, i.uvgrab.xyw );
+	half4 tint = tex2D( _MainTex, i.uvmain );
+	
+	return col * tint;
 }
+
 ENDCG
+			// Set up the textures for this pass
+			SetTexture [_GrabTexture] {}	// Texture we grabbed in the pass above
+			SetTexture [_BumpMap] {}		// Perturbation bumpmap
+			SetTexture [_MainTex] {}		// Color tint
 		}
 	}
+	
+	// ------------------------------------------------------------------
+	//  Radeon 9000
+	
+	#warning Upgrade NOTE: SubShader commented out because of manual shader assembly
+/*SubShader {
 
+		GrabPass {							
+			Name "BASE"
+			Tags { "LightMode" = "Always" }
+ 		}
+ 		
+		Pass {
+			Name "BASE"
+			Tags { "LightMode" = "Always" }
+			
+			Program "" {
+				SubProgram {
+				Local 0, ([_BumpAmt],0,0,0.001)
+"!!ATIfs1.0
+StartConstants;
+	CONSTANT c0 = program.local[0];
+EndConstants;
+
+StartPrelimPass;
+	PassTexCoord r0, t0.stq_dq;	# refraction position
+	SampleMap r1, t1.str;		# bumpmap
+	MAD r0, r1.2x.bias, c0.r, r0;
+EndPass;
+
+StartOutputPass;
+	SampleMap r0, r0.str;	# sample modified refraction texture
+	SampleMap r2, t2.str;		# Get main color texture
+	
+	MUL r0, r0, r2;
+EndPass; 
+"
+				}
+			}
+			SetTexture [_GrabTexture] {}
+			SetTexture [_BumpMap] {}
+			SetTexture [_MainTex] {}
+		}
+	}*/
+	
 	// ------------------------------------------------------------------
 	// Fallback for older cards and Unity non-Pro
 	
